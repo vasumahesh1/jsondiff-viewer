@@ -1,0 +1,68 @@
+.jdv-code-container {
+  width: 100%;
+  font-family: Consolas, Monospace;
+  color: #e4e4e4;
+  font-size: 16px;
+}
+
+.jdv-code-container.light {
+  color: #252525;
+}
+
+.jdv-code-row {
+  width: 100%;
+  padding: 2px 2px;
+}
+
+.jdv-code-row > * {
+  display: inline-block;
+}
+
+.jdv-code-key {
+  padding: 0px 4px;
+  font-weight: 300;
+}
+
+.jdv-code-value {
+  font-weight: bold;
+  padding: 0px 4px;
+}
+
+.jdv-code-value.new, .jdv-code-key.new, .jdv-code-divider.new, .jdv-code-object.new {
+  color: #a9d3ab;
+}
+
+.jdv-code-value.modified {
+  color: #fed37f;
+}
+
+.jdv-code-value.deleted, .jdv-code-key.deleted, .jdv-code-divider.deleted, .jdv-code-object.deleted {
+  color: #f58e8e;
+}
+
+.jdv-code-modified-1, .jdv-code-modified-2 {
+  display: inline-block;
+  color: #fed37f;
+  padding: 0px 4px;
+}
+
+.jdv-code-object {
+  font-weight: bold;
+  padding: 0px 4px;
+}
+
+.jdv-code-modified-divider {
+  display: inline-block;
+  color: #fed37f;
+  padding: 0px 4px;
+  font-weight: 300;
+}
+
+.jdv-code-deleted-1, .jdv-code-deleted-divider {
+  display: inline-block;
+  color: #f58e8e;
+  padding: 0px 4px;
+}
+
+.jdv-code-divider {
+}

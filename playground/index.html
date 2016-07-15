@@ -1,0 +1,68 @@
+<!DOCTYPE doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                JSON Diff Viewer
+            </title>
+            <style>
+                * {
+      margin:; 0px;
+      padding: 0px;
+    }
+
+    body {
+      background-color: #2d2d2d;
+    }
+            </style>
+            <link href="../jsondiff-viewer.css" rel="stylesheet">
+                <script src="../bower_components/jsondiffpatch/public/build/jsondiffpatch.js">
+                </script>
+                <script src="../index.js">
+                </script>
+            </link>
+        </meta>
+    </head>
+    <body>
+    </body>
+    <script type="text/javascript">
+        var left = {
+          no_change: 10,
+          value_change: 10,
+          value_delete: 10,
+          object_change: {
+            value_change: 15
+          },
+          array_change: [{
+            value_change: 15,
+            _id: 'array_idx_1'
+          }, {
+            value_delete: 15,
+            _id: 'array_idx_2'
+          }, {
+            _id: 'array_idx_2'
+          }]
+        };
+
+        var right = {
+          no_change: 10,
+          value_change: 15,
+          value_add: 20,
+          object_change: {
+            value_change: 20
+          },
+          array_change: [{
+            value_change: 20,
+            _id: 'array_idx_1'
+          }, {
+            _id: 'array_idx_2'
+          }, {
+            value_add: 15,
+            _id: 'array_idx_2'
+          }]
+        };
+
+        var html = window.JSONDiffViewer(left, right);
+        document.body.innerHTML = html;
+    </script>
+</html>

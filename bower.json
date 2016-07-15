@@ -1,0 +1,20 @@
+{
+  "name": "jsondiff-viewer",
+  "description": "Simple JSON Diff Viewer",
+  "main": "index.js",
+  "authors": [
+    "Vasu Mahesh <vasu.mahesh@hotmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jsondiffpatch": "^0.1.43"
+  }
+}
