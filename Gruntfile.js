@@ -44,8 +44,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadTasks('tasks');
-
   grunt.loadNpmTasks('grunt-release');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
