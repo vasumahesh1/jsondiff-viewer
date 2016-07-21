@@ -5,7 +5,7 @@ Library that generates structured HTML using [jsondiffpatcher](https://github.co
 ![Screenshot](/resources/img/diff_basic.PNG?raw=true "Screenshot of Basic Diff Example")
 
 
-#### Installation
+### Installation
 using NPM:
 ```sh
 npm install jsondiff-viewer --save
@@ -16,8 +16,28 @@ using Bower:
 bower install jsondiff-viewer --save
 ```
 
-#### Usage
+### Usage
 
+Requiring:
+
+Browser:
+```html
+<link href="./jsondiff-viewer.css" rel="stylesheet">
+
+<script src="./jsondiffpatch.js"> <!-- dependency -->
+<script src="./jsondiff-viewer.js">
+
+<script type="text/javascript">
+console.log(window.JSONDiffViewer);
+</script>
+```
+
+Node:
+```js
+var JSONDiffViewer = require('jsondiff-viewer');
+```
+
+Using:
 ```js
 var left = {
   no_change: 10,
@@ -58,7 +78,7 @@ var right = {
 var html = window.JSONDiffViewer(left, right); // Defaults to Black Background - i.e. White font text
 ```
 
-#### Options
+### Options
 
 You can supply options as:
 
@@ -67,12 +87,14 @@ var html = window.JSONDiffViewer(left, right, options);
 ```
 
 * options.tab - int - Optional
+  
   Tab spacing to be used per nesting. Defaults to `10`.
 
 * options.light - boolean - Optional
+  
   Print out HTML for Light Backgrounds (White background). Defaults to `false`
 
-#### Developing
+### Developing
 ```bash
 npm install
 bower install
