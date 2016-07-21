@@ -27,6 +27,7 @@
 
     var css = options.css !== undefined ? options.css : true;
     var light = options.light ? options.light : false;
+    var tab = options.tab ? options.tab : 10;
 
     var mainDelta = lib.diff(left, right);
 
@@ -47,7 +48,7 @@
           html += _parseDeltaHTML(key, keyDiff, nestLevel);
         } else {
           if (!keyDiff._t) {
-            var marginNest = nestLevel * 10;
+            var marginNest = nestLevel * tab;
 
             // Start Object
             var row = _getDiv('jdv-code-row');
@@ -87,7 +88,7 @@
             html += _getDivEnd();
 
             nestLevel++;
-            var marginNest = nestLevel * 10;
+            var marginNest = nestLevel * tab;
 
             var nestRow = _getDiv('jdv-code-nest', 'margin-left:' + marginNest + 'px;');
             html += nestRow;
@@ -149,7 +150,7 @@
 
           valueHtml += _getDivEnd(); // Close the Value Row so we can start Nesting
 
-          var marginNest = nestLevel * 10;
+          var marginNest = nestLevel * tab;
           var nestRow = _getDiv('jdv-code-nest', 'margin-left:' + marginNest + 'px;');
           valueHtml += nestRow; // nest start
 
@@ -205,7 +206,7 @@
 
             valueHtml += _getDivEnd(); // Close the Value Row so we can start Nesting
 
-            var marginNest = nestLevel * 10;
+            var marginNest = nestLevel * tab;
             var nestRow = _getDiv('jdv-code-nest', 'margin-left:' + marginNest + 'px;');
             valueHtml += nestRow; // nest start
 
@@ -256,7 +257,7 @@
 
           nestLevel++;
 
-          var marginNest = nestLevel * 10;
+          var marginNest = nestLevel * tab;
           var nestRow = _getDiv('jdv-code-nest', 'margin-left:' + marginNest + 'px;');
           dom += nestRow;
           dom += _printObject(value, nestLevel, opts);

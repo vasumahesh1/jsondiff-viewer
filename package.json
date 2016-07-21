@@ -10,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "jsondiffpatch": "^0.1.43"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-release": "^0.14.0"
   }
 }
