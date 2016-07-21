@@ -12,7 +12,7 @@
     }
 
     body {
-      background-color: #2d2d2d;
+      background-color: #fff;
     }
             </style>
             <link href="../jsondiff-viewer.css" rel="stylesheet">
@@ -62,7 +62,9 @@
           }]
         };
 
-        var html = window.JSONDiffViewer(left, right);
+        var html = window.JSONDiffViewer(left, right, {
+          light: true
+        });
         document.body.innerHTML = html;
     </script>
 </html>

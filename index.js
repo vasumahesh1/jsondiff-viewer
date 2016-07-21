@@ -120,8 +120,7 @@
     }
 
     function _parseDeltaHTML(key, keyDiff, nestLevel) {
-      var row = _getDiv('jdv-code-row');
-
+      var row;
       var valueClass = ['jdv-code-value'];
       var valueHtml = '';
 
@@ -129,14 +128,14 @@
 
       // New Element
       if (keyDiff.length === 1) {
-
+        row = _getDiv('jdv-code-row new');
 
         if (typeof keyDiff[0] !== 'object' || keyDiff[0] === null) {
           row += _parseKey(key, 'new');
           row += _addDivider('new');
 
           valueClass.push('new');
-          valueHtml += keyDiff[0];
+          valueHtml += _getDiv('jdv-code-new-1') + keyDiff[0] + _getDivEnd();
         } else {
           // Start Object
           var value = _getDiv('jdv-code-row'); // row start
@@ -170,6 +169,7 @@
       }
       // Modified Value
       else if (keyDiff.length === 2) {
+        row = _getDiv('jdv-code-row modified');
         row += _parseKey(key);
         row += _addDivider();
 
@@ -181,6 +181,7 @@
 
         valueHtml += firstHtml + divider + secondHtml;
       } else if (keyDiff.length === 3) {
+        row = _getDiv('jdv-code-row deleted');
         // Deleted Element
         if (keyDiff[1] === 0 && keyDiff[2] === 0) {
           if (typeof keyDiff[0] !== 'object' || keyDiff[0] === null) {
