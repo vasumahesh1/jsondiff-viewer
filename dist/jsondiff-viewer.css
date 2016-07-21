@@ -1,0 +1,121 @@
+.jdv-code-container {
+  width: 100%;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: #f6f6f6;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.jdv-code-container * {
+  box-sizing: border-box;
+}
+
+.jdv-code-container.light {
+  color: #333;
+}
+
+.jdv-code-row {
+  width: 100%;
+  min-height: 22px;
+  line-height: 16px;
+  padding: 3px 2px;
+  box-sizing: border-box;
+}
+
+.jdv-code-row > * {
+  display: inline-block;
+}
+
+.jdv-code-key {
+  padding: 0px 0px 0px 4px;
+  font-weight: 300;
+}
+
+.jdv-code-value {
+  font-weight: bold;
+  padding: 0px 4px;
+}
+
+.jdv-code-row.new {
+  background: #eaffea;
+}
+
+.jdv-code-row.modified {
+  background: #fff8b9;
+}
+
+.jdv-code-row.deleted {
+  background: #ffecec;
+}
+
+.jdv-code-value.new, .jdv-code-key.new, .jdv-code-divider.new, .jdv-code-object.new {
+  /*color: #a9d3ab;*/
+}
+
+.jdv-code-value.new, .jdv-code-object.new {
+  
+}
+
+.jdv-code-new-1 {
+  display: inline-block;
+  background: #a6f3a6;
+  padding: 0px 4px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.jdv-code-value.modified {
+  /*color: #fed37f;*/
+}
+
+.jdv-code-value.deleted, .jdv-code-key.deleted, .jdv-code-divider.deleted, .jdv-code-object.deleted {
+  /*color: #f58e8e;*/
+}
+
+.jdv-code-modified-1, .jdv-code-modified-2 {
+  display: inline-block;
+  background: #f3eea6;
+  padding: 0px 4px;
+}
+
+.jdv-code-modified-1 {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.jdv-code-modified-2 {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.jdv-code-object {
+  padding: 0px 4px;
+}
+
+.jdv-code-modified-divider {
+  display: inline-block;
+  background: #f3eea6;
+  padding: 0px 4px;
+  font-weight: 300;
+}
+
+.jdv-code-deleted-1, .jdv-code-deleted-divider {
+  display: inline-block;
+  background: #f3a6a6;
+  padding: 0px 4px;
+}
+
+.jdv-code-deleted-1 {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.jdv-code-deleted-divider {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.jdv-code-divider {
+}
