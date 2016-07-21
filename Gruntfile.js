@@ -11,7 +11,15 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     copy: {
-      dist: 
+      dist: {
+        files: [{
+          src: 'index.js',
+          dest: 'dist/jsondiff-viewer.js'
+        }, {
+          src: 'jsondiff-viewer.css',
+          dest: 'dist/jsondiff-viewer.css'
+        }]
+      }
     },
 
     release: {
@@ -25,6 +33,7 @@ module.exports = function(grunt) {
         pushTags: false,
         npm: true,
         npmtag: false,
+        beforeBump: ['copy:dist'],
         commitMessage: '[Json DiffViewer] Release Commit <%= version %>',
         tagMessage: 'Release Build <%= version %>',
         github: {
