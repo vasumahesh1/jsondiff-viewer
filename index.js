@@ -33,8 +33,6 @@
 
     var html = '';
 
-    console.log('Delta', mainDelta);
-
     html += _getDiv('jdv-code-container ' + (light ? 'light' : ''));
     _parse(mainDelta, 1);
 
