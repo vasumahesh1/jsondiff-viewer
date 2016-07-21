@@ -1,6 +1,6 @@
 {
   "name": "jsondiff-viewer",
-  "description": "Simple JSON Diff Viewer",
+  "description": "Simple JSON Diff Viewer. Clean concise HTML with CSS",
   "main": "index.js",
   "authors": [
     "Vasu Mahesh <vasu.mahesh@hotmail.com>"
@@ -17,5 +17,5 @@
   "dependencies": {
     "jsondiffpatch": "^0.1.43"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }

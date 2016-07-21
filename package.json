@@ -1,7 +1,7 @@
 {
   "name": "jsondiff-viewer",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Simple JSON Diff Viewer. Clean concise HTML with CSS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
