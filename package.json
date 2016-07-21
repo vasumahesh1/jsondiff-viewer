@@ -1,6 +1,6 @@
 {
   "name": "jsondiff-viewer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Simple JSON Diff Viewer. Clean concise HTML with CSS",
   "main": "index.js",
   "scripts": {
