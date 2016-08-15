@@ -136,13 +136,17 @@
           valueClass.push('new');
           valueHtml += _getDiv('jdv-code-new-1') + keyDiff[0] + _getDivEnd();
         } else {
+          var obj = keyDiff[0];
+
           // Start Object
           var value = _getDiv('jdv-code-row'); // row start
           value += _parseKey(key, 'new');
           value += _addDivider('new');
 
+          var isArray = obj.constructor === Array ? true : false;
+
           value += _getDiv('jdv-code-object new');
-          value += '{';
+          value += isArray ? '[' : '{';
           value += _getDivEnd();
           valueHtml += value;
 
@@ -154,14 +158,14 @@
 
           var opts = {};
           opts.type = 'new';
-          valueHtml += _printObject(keyDiff[0], nestLevel, opts);
+          valueHtml += _printObject(obj, nestLevel, opts);
 
           valueHtml += _getDivEnd(); // nest end
           valueHtml += _getDivEnd(); // row end
 
           var endBrace = _getDiv('jdv-code-row');
           endBrace += _getDiv('jdv-code-object new');
-          endBrace += '}';
+          endBrace += isArray ? ']' : '}';
           endBrace += _getDivEnd();
           valueHtml += endBrace;
         }
@@ -192,13 +196,16 @@
             valueHtml += firstHtml + divider;
           } else {
             var obj = keyDiff[0];
+
+            var isArray = obj.constructor === Array ? true : false;
+
             // Start Object
             var value = _getDiv('jdv-code-row'); // row start
             value += _parseKey(key, 'deleted');
             value += _addDivider('deleted');
 
             value += _getDiv('jdv-code-object deleted');
-            value += '{';
+            value += isArray ? '[' : '{';
             value += _getDivEnd();
             valueHtml += value;
 
@@ -217,7 +224,7 @@
 
             var endBrace = _getDiv('jdv-code-row');
             endBrace += _getDiv('jdv-code-object deleted');
-            endBrace += '}';
+            endBrace += isArray ? ']' : '}';
             endBrace += _getDivEnd();
             valueHtml += endBrace;
           }
@@ -241,6 +248,8 @@
       for (var key in obj) {
         var value = obj[key];
 
+        var isArray = value.constructor === Array ? true : false;
+
         if (typeof value === 'object' && value !== null) {
           // Start Object
           var row = _getDiv('jdv-code-row');
@@ -248,7 +257,7 @@
           row += _addDivider(type);
           dom += row;
           var openBrace = _getDiv('jdv-code-object ' + type);
-          openBrace += '{';
+          openBrace += isArray ? '[' : '{';
           openBrace += _getDivEnd();
           dom += openBrace;
           dom += _getDivEnd();
@@ -264,13 +273,11 @@
           // Close Object
           var row = _getDiv('jdv-code-row');
           var closeBrace = _getDiv('jdv-code-object ' + type);
-          closeBrace += '}';
+          closeBrace += isArray ? ']' : '}';
           closeBrace += _getDivEnd();
           row += closeBrace;
           dom += row;
           dom += _getDivEnd();
-        } else if (value.constructor === Array) {
-
         } else {
 
           var row = _getDiv('jdv-code-row');
