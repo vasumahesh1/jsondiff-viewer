@@ -248,7 +248,7 @@
       for (var key in obj) {
         var value = obj[key];
 
-        var isArray = value.constructor === Array ? true : false;
+        var isArray = value && value.constructor === Array ? true : false;
 
         if (typeof value === 'object' && value !== null) {
           // Start Object
